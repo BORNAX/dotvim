@@ -1,3 +1,9 @@
+"pathogen instructions (must be before autocmd detection, to be sure place at the start)
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
 " Configuration file for vim
 set modelines=0         " CVE-2007-2438
 
@@ -25,3 +31,7 @@ set number
 " hard tab puri
 set shiftwidth=2
 set tabstop=2
+
+" vim-latex-live-preview settings
+autocmd Filetype tex setl updatetime=1
+let g:livepreview_previewer = 'open -a Preview'
